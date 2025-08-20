@@ -3,9 +3,6 @@ export const currencyFormatter = new Intl.NumberFormat("en-IN", {
   currency: "INR",
 });
 
-
-
-
 // export const formatINRCurrency = (amount) => {
 //   return new Intl.NumberFormat("en-IN", {
 //     style: "currency",
