@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "npm install --prefix ../food-order && npm run build --prefix ../food-order && cp -r ../food-order/dist ./public"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,6 @@
     "express": "^4.18.2"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   }
 }
