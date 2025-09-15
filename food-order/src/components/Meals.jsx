@@ -1,19 +1,18 @@
-import MealItem from "./MealItem.jsx";
-import useHttp from "../hooks/useHttp.js";
-import Error from "./Error.jsx";
+import MealItem from './MealItem.jsx';
+import useHttp from '../hooks/useHttp.js';
+import Error from './Error.jsx';
 
 const requestConfig = {};
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 export default function Meals() {
   const {
     data: loadedMeals,
     isLoading,
     error,
-  } = useHttp(
-    "https://food-delivery-projejct.onrender.com/meals",
-    requestConfig,
-    []
-  );
+  } = useHttp(`${API_URL}/meals`, requestConfig, []);
+}
 
   if (isLoading) {
     return <p className="center">Fetching meals...</p>;
