@@ -4,15 +4,12 @@ import Error from './Error.jsx';
 
 const requestConfig = {};
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
-
 export default function Meals() {
   const {
     data: loadedMeals,
     isLoading,
     error,
-  } = useHttp(`${API_URL}/meals`, requestConfig, []);
-}
+  } = useHttp('http://localhost:3000/meals', requestConfig, []);
 
   if (isLoading) {
     return <p className="center">Fetching meals...</p>;
