@@ -3,6 +3,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import express from "express";
+import cors from "cors";
+app.use(cors());
 
 const app = express();
 
